@@ -28,7 +28,7 @@ public class MyLinkedList {
         //node.setNext();  // hhhhh&&&&&&&&& sdfsdfłłłłłłłł
     }
     public void addToEnd(Node node) {
-        if (node == null) {
+        if (node == null) { // provision
             return;
         }
 
@@ -46,13 +46,14 @@ public class MyLinkedList {
 
         }
     }
+
     public int getSize() {
        // return 1;
 
         if (head == null) {
             return 0;
         } else {
-            Node tmp = head; // pomocna premmena
+            Node tmp = head; // help value
             int count = 0;
 
             while (tmp != null) {
@@ -76,7 +77,7 @@ public class MyLinkedList {
 
             Node node1 = head;
             for (int i = 1; i < index; i++) {
-                node1 = node1.getNext();
+                node1 = node1.getNext(); // hello
             }
             node.setNext(node1.getNext());
             node1.setNext(node);
@@ -134,12 +135,7 @@ public class MyLinkedList {
             return null;
         }
 
-
-
         Node tmp = head;
-
-        //if (tmp.getData())
-
         while (tmp != null) {
             if (tmp.getData().equals(name)) {
                 return tmp;
