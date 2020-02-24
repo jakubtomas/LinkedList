@@ -2,7 +2,7 @@ package sample;
 
 public class Node<T> {
 
-    private T name;
+    private T data;
     private Node next;
 
 
@@ -12,7 +12,7 @@ public class Node<T> {
     }
 
     public T getData() {
-        return name ;
+        return data;
     }
 
     public Node getNext() {
@@ -20,7 +20,7 @@ public class Node<T> {
     }
 
     public Node(T name) {
-        this.name = name;
+        this.data = name;
         this.next = null;
     }
 

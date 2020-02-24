@@ -12,7 +12,7 @@ public class MyLinkedList {
 
     }
 
-//
+    //
     public void addToFront(Node node) {
         if (node == null) {
             return;
@@ -22,11 +22,12 @@ public class MyLinkedList {
             head = node;
         } else {
             node.setNext(head);
-            head=node;
+            head = node;
         }
 
         //node.setNext();  // hhhhh&&&&&&&&& sdfsdfłłłłłłłł
     }
+
     public void addToEnd(Node node) {
         if (node == null) { // provision
             return;
@@ -37,7 +38,7 @@ public class MyLinkedList {
         } else {
             Node tmp = head; // pomocna premmena
             int count = 0;
-            while (tmp.getNext()!= null) {
+            while (tmp.getNext() != null) {
                 tmp = tmp.getNext();
                 count++;
                 System.out.println("pocitadlo " + count);
@@ -48,7 +49,7 @@ public class MyLinkedList {
     }
 
     public int getSize() {
-       // return 1;
+        // return 1;
 
         if (head == null) {
             return 0;
@@ -65,15 +66,15 @@ public class MyLinkedList {
     }
 
 
-    public void add(Node node , int index) {/// dosnt work I dont know why
-        if (node == null){
+    public void add(Node node, int index) {/// dosnt work I dont know why
+        if (node == null) {
             return;
         }
-        if (index <= 0){
+        if (index <= 0) {
             addToFront(node);
-        }else if (index >= getSize()){
+        } else if (index >= getSize()) {
             addToEnd(node);
-        }else {
+        } else {
 
             Node node1 = head;
             for (int i = 1; i < index; i++) {
@@ -102,7 +103,7 @@ public class MyLinkedList {
 
     public boolean remove(Node node) {
         if (head == null || node == null) {
-            return false ;
+            return false;
         }
 
         if (head == node) {
@@ -127,17 +128,21 @@ public class MyLinkedList {
     public void removeAll() {
         head = null;
 
-    }//
+    }
 
-    public Node findByName(String name ) {
-        if (head == null || name== null) {
+    public Node findByName(String name) {
+        if (head == null || name == null) {
 
             return null;
         }
 
+
         Node tmp = head;
+        if (!(tmp.getData() instanceof String)) // We checked that tmp is String if not We return null
+            return null;
+
         while (tmp != null) {
-            if (tmp.getData().equals(name)) {
+            if (tmp.getData().equals(name)) {// compare data  with input name
                 return tmp;
             }
             tmp = tmp.getNext();
