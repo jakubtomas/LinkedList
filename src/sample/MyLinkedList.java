@@ -12,7 +12,7 @@ public class MyLinkedList {
 
     }
 
-
+//
     public void addToFront(Node node) {
         if (node == null) {
             return;
