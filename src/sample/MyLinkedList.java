@@ -25,7 +25,7 @@ public class MyLinkedList {
             head=node;
         }
 
-        //node.setNext();
+        //node.setNext();  // hhhhh&&&&&&&&&
     }
     public void addToEnd(Node node) {
         if (node == null) {
@@ -93,7 +93,7 @@ public class MyLinkedList {
             Node tmp = head; // pomocna premmena
 
             while (tmp != null) {
-                System.out.println(tmp.getName());
+                System.out.println(tmp.getData());
                 tmp = tmp.getNext();
             }
         }
@@ -126,7 +126,7 @@ public class MyLinkedList {
     public void removeAll() {
         head = null;
 
-    }
+    }//
 
     public Node findByName(String name ) {
         if (head == null || name== null) {
@@ -135,10 +135,13 @@ public class MyLinkedList {
         }
 
 
+
         Node tmp = head;
 
+        //if (tmp.getData())
+
         while (tmp != null) {
-            if (tmp.getName().equals(name)) {
+            if (tmp.getData().equals(name)) {
                 return tmp;
             }
             tmp = tmp.getNext();

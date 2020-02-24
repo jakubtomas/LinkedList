@@ -1,8 +1,8 @@
 package sample;
 
-public class Node {
+public class Node<T> {
 
-    private String name;
+    private T name;
     private Node next;
 
 
@@ -11,15 +11,15 @@ public class Node {
         this.next = next;
     }
 
-    public String getName() {
-        return name;
+    public T getData() {
+        return name ;
     }
 
     public Node getNext() {
         return next;
     }
 
-    public Node(String name) {
+    public Node(T name) {
         this.name = name;
         this.next = null;
     }

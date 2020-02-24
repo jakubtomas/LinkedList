@@ -9,6 +9,8 @@ public class Main  {
 
         MyLinkedList myLinkedList = new MyLinkedList();
 
+
+       // Node <Integer>
         Node n1 = new Node("filop");
         Node n2 = new Node("Peter");
         Node n3 = new Node("Katarina");
