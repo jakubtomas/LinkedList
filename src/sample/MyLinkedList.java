@@ -25,7 +25,7 @@ public class MyLinkedList {
             head=node;
         }
 
-        //node.setNext();  // hhhhh&&&&&&&&&
+        //node.setNext();  // hhhhh&&&&&&&&& sdfsdfłłłłłłłł
     }
     public void addToEnd(Node node) {
         if (node == null) {
