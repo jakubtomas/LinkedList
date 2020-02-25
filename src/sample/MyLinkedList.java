@@ -4,6 +4,12 @@ public class MyLinkedList {
 
     private Node head;
 
+    public Node getHead() {
+        return head;
+    }
+
+
+
     public MyLinkedList(Node head) {
         this.head = head;
     }
@@ -25,7 +31,6 @@ public class MyLinkedList {
             head = node;
         }
 
-        //node.setNext();  // hhhhh&&&&&&&&& sdfsdfłłłłłłłł
     }
 
     public void addToEnd(Node node) {
@@ -107,10 +112,9 @@ public class MyLinkedList {
         }
 
         if (head == node) {
-            head = node.getNext();
+            head = node.getNext(); // ked sa rovna tak priradi dalsi  a stary vymaze
             return true;
         }
-
         Node tmp = head;
 
         while (tmp.getNext() != node) {
